@@ -1,0 +1,98 @@
+.hal1  img{
+    margin-left: -1300px;
+    margin-top: -55px
+  }
+  .hal1 ul{
+    margin-left: 800px;
+    margin-top: -30px;
+  }
+  .hal1 li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: 30px;
+    margin-top: -100px;
+  }
+  .hal2 img {
+    width: 1533px;
+    height: 600px;
+  }
+  .box{
+    display: inline-block;
+    top: -400px;
+    margin-left: -1130px;
+    height: 400px;
+    width: 1400px;
+    padding-top: 200px;
+    background: transparent;
+    border: 5px solid black;
+    border-radius: 20px;
+    position: relative;
+    h1{
+      margin-left: 700px;
+      margin-top: 30px;
+      padding-bottom: 20px;
+      font-size: 60px;
+    }
+    p{
+      margin-bottom: 20px;
+      margin-right: 200px;
+      padding-left: 810px;
+      margin-top: 20px;
+      text-align: left;
+     }
+  }
+  
+   
+  .box-k{
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    border: 5px solid black;
+    margin-left: 370px;
+    margin-top: 65px;
+    border-radius: 20px 20px 0px 0px;
+    h3{
+      font-size: 20px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-left: 180px;
+    margin-top: -30px;
+    width: 200px;
+  }
+}
+  //css BAGIAN SAMPING//
+
+
+  .hal3{
+    display: inline-block;
+    top: -300px;
+    height: 400px;
+    width: 500px;
+    background: transparent;
+    border: 5px solid $bc;
+    border-radius: 20px;
+    position: relative;
+    margin-left: 50px;
+    margin-right: -720px;
+  h1{
+    padding-top: 10px;
+    margin-left: -100px;
+  }
+   p{
+    text-align: left;
+    margin-left: 60px;
+ }
+}
+ 
+  .jun{
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    border: 5px solid $bc;
+    margin-top: 195px;
+    margin-left: -250px;
+    
+  }
