@@ -1,8 +1,9 @@
 <template>
   <div class="home">
-    <input type="text" placeholder="Search here" />
-
     <h1>List Phone Mobile Product</h1>
+    <input class="firstInput" type="text" placeholder="Search here" />
+
+    
     <div class="table">
       <table>
         <thead>
@@ -53,79 +54,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
-    <!-- Bagian bawah -->
-    <div class="section-1">
-      <h1>Google Pixel 6 pro</h1>
-      <img src="../assets/pixel 6 pro.jpg" />
-      <p>color : white</p>
-      <p>capacity : 120 GB</p>
-      <a href="#">Purchase</a> |
-      <a href="#">Delete</a>
-    </div>
-    <div class="section-2">
-      <h1>Apple Iphone 12 Mini</h1>
-      <img src="../assets/mini 12.jpg" />
-      <p>color : white</p>
-      <p>capacity : 120 GB</p>
-      <a href="#">Purchase</a> |
-      <a href="#">Delete</a>
-    </div>
-    <div class="section-3">
-      <h1>Apple Iphone 12 Pro Max</h1>
-      <img src="../assets/12 promax.jpg" />
-      <p>color : white</p>
-      <p>capacity : 120 GB</p>
-      <a href="#">Purchase</a> |
-      <a href="#">Delete</a>
-    </div>
-    <div class="section-4">
-      <h1>Google Pixel 6 Pro</h1>
-      <img src="../assets/pixel 6 pro.jpg" />
-      <p>color : white</p>
-      <p>capacity : 120 GB</p>
-      <a href="#">Purchase</a> |
-      <a href="#">Delete</a>
-    </div>
-    <div class="section-5">
-      <h1>Google Pixel 6 Pro</h1>
-      <img src="../assets/pixel 6 pro.jpg" />
-      <p>color : white</p>
-      <p>capacity : 120 GB</p>
-      <a href="#">Purchase</a> |
-      <a href="#">Delete</a>
-    </div>
-    <div class="section-6">
-      <h1>Google Pixel 6 Pro</h1>
-      <img src="../assets/pixel 6 pro.jpg" />
-      <p>color : white</p>
-      <p>capacity : 120 GB</p>
-      <a href="#">Purchase</a> |
-      <a href="#">Delete</a>
-    </div>
-    <div class="section-7">
-      <h1>Google Pixel 6 Pro</h1>
-      <img src="../assets/pixel 6 pro.jpg" />
-      <p>color : white</p>
-      <p>capacity : 120 GB</p>
-      <a href="#">Purchase</a> |
-      <a href="#">Delete</a>
-    </div>
-    <div class="section-8">
-      <h1>Google Pixel 6 Pro</h1>
-      <img src="../assets/pixel 6 pro.jpg" />
-      <p>color : white</p>
-      <p>capacity : 120 GB</p>
-      <a href="#">Purchase</a> |
-      <a href="#">Delete</a>
-    </div>
-    <div class="section-9">
-      <h1>Google Pixel 6 Pro</h1>
-      <img src="../assets/pixel 6 pro.jpg" />
-      <p>color : white</p>
-      <p>capacity : 120 GB</p>
-      <a href="#">Purchase</a> |
-      <a href="#">Delete</a>
     </div>
   </div>
 </template>
@@ -276,5 +204,5 @@ export default {
 </script>
 
 <style>
-@import "@/assets/scss/tabel.scss";
+@import "@/assets/scss/style.scss";
 </style>
