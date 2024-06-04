@@ -11,5 +11,4 @@ import store from './store'
 
 const app = createApp(App).use(store).use(router)
 app.use(createBootstrap({ components: true, directives: true })) // Change this line
-app.mount('#app')
-nhj-qimb-zqk
+app.mount('#app');
