@@ -32,7 +32,7 @@ export default {
   methods: {
     ...mapActions(["deleteProduk"]),
     search() {
-      this.setInput(this.input);
+      this.$store.dispatch("setInput", this.input)
     },
   },
 };
