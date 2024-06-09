@@ -1,12 +1,19 @@
 <template>
+  <!-- component tabel tambah dibawah  -->
+
+  <!-- Component tambah produk tambah dibawah  -->
+
+  <!-- component hapus produk tambah dibawah -->
+
+  <!-- pindahkan tabel di bawah ke component -->
   <div class="home">
     <h1>List Phone Mobile Product</h1>
-    
+
     <div class="firstInput">
       <input type="text" placeholder="Search here" v-model="input" />
       <button v-on:click="search">Search</button>
     </div>
-    
+
     <div class="table">
       <table>
         <thead>
@@ -56,14 +63,13 @@
             <td>${{ formattedTotalPrice }}</td>
           </tr>
           <tr id="zero" class="disable">
-              <td colspan="12">Data not found!</td>
+            <td colspan="12">Data not found!</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -181,8 +187,10 @@ export default {
           },
         },
       ],
-      input : '',
+      input: "",
       filter: [],
+      produkTambah: [],
+      produkDelete: [],
     };
   },
   computed: {
@@ -197,27 +205,27 @@ export default {
     formattedTotalPrice() {
       return Math.round(this.totalPrice);
     },
-    search(){
-      if(this.input.length > 0){
-            this.filter = [];
-            this.products.forEach(name=>{
-              const nam = name.name.replaceAll(' ', '').toLowerCase();
-              const inputName = this.input.replaceAll(' ', '').toLowerCase();
-              if(nam.includes(inputName)){
-                this.filter.push(name);
-              }
-            })
-            if(this.filter.length < 1){
-              document.getElementById("zero").classList.remove('disable');
-              document.getElementById("total").classList.add('disable');
-            }else{
-              document.getElementById("zero").classList.add('disable');
-              document.getElementById("total").classList.remove('disable');
-            }
-          }else{
-            this.filter = this.products;
+    search() {
+      if (this.input.length > 0) {
+        this.filter = [];
+        this.products.forEach((name) => {
+          const nam = name.name.replaceAll(" ", "").toLowerCase();
+          const inputName = this.input.replaceAll(" ", "").toLowerCase();
+          if (nam.includes(inputName)) {
+            this.filter.push(name);
           }
-    }
+        });
+        if (this.filter.length < 1) {
+          document.getElementById("zero").classList.remove("disable");
+          document.getElementById("total").classList.add("disable");
+        } else {
+          document.getElementById("zero").classList.add("disable");
+          document.getElementById("total").classList.remove("disable");
+        }
+      } else {
+        this.filter = this.products;
+      }
+    },
   },
   beforeMount() {
     this.products.forEach((product) => {
