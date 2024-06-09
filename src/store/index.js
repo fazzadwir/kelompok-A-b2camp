@@ -121,10 +121,9 @@ export default createStore({
   getters: {
     filteredProducts: (state) => {
       if (state.input.length > 0) {
+        state.input = state.input.toLowerCase().replaceAll(" ", "")
         return state.products.filter((product) =>
-          product.name
-            .toLowerCase()
-            .includes(state.input.toLowerCase().replaceAll(" ", ""))
+          product.name.toLowerCase().replaceAll(" ", "").includes(state.input)
         );
       }
       return state.products;
