@@ -6,6 +6,16 @@
       v-model="newProductName"
       placeholder="Enter Product Name"
     />
+    <input
+      type="number"
+      v-model="newProductPrice"
+      placeholder="Enter Product Price"
+    />
+    <input
+      type="text"
+      v-model="newProductColor"
+      placeholder="Enter Product Color"
+    />
     <button @click="addProduct">Add</button>
     <ul>
       <li v-for="(product, index) in produkTambah" :key="index">
@@ -22,6 +32,8 @@ export default {
   data() {
     return {
       newProductName: "",
+      newProductPrice:"",
+      newProductColor:"",
     };
   },
   computed: {
@@ -33,13 +45,21 @@ export default {
       const newProduct = {
         id: Date.now().toString(),
         name: this.newProductName,
-        data: {},
+        data: {
+          price: this.newProductPrice,
+          color: this.newProductColor,
+        },
       };
-      this.addProduct(newProduct);
+      // this.addProduct(newProduct);
+      this.$store.dispatch("tambahProduk",newProduct);
       this.newProductName = "";
+      this.newProductPrice = "";
+      this.newProductColor = "";
     },
   },
 };
+
+
 </script>
 
 <style></style>

@@ -148,6 +148,9 @@ export default createStore({
     SET_INPUT(state, input) {
       state.input = input;
     },
+    TAMBAH_PRODUK(state, product) {
+      state.products.push(product);
+    }
   },
   actions: {
     deleteProduk({ commit }, id) {
@@ -156,6 +159,9 @@ export default createStore({
     setInput({ commit }, input) {
       commit("SET_INPUT", input);
     },
+    tambahProduk({ commit }, product) {
+      commit("TAMBAH_PRODUK", product);
+    }
   },
   modules: {},
 });
