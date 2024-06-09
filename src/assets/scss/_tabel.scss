@@ -1,25 +1,11 @@
-*{
-  box-sizing: border-box;
-}
-body{
-  margin: 40px;
-  font-family: "ubuntu", Verdana, Geneva, Tahoma, sans-serif;
-}
-.tablel{
-  max-width: 1500px;
-  border: 1px solid aqua;
-  background-color: aliceblue; 
-  padding: 15px;
-  overflow: auto;
-  margin: auto;
-  border-radius: 4px;
-}
+
 table{
   width: 100%;
   font-size: 14px;
   color: #444;
   white-space: nowrap; 
   border-collapse: collapse;
+  border-radius: 20px;
   >thead{
     background-color: yellowgreen;
     color: whitesmoke;
@@ -32,7 +18,7 @@ table{
     padding: 4px 7px;
   }
   >tbody>tr{
-    background-color: whitesmoke;
+    background-color: blue;
     transition: 0.3 ease-in-out;
   }
   >tbody>tr:nth-child(even){
