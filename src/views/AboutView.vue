@@ -2,7 +2,7 @@
   <div class="home">
     <h1>List Phone Mobile Product</h1>
     <div class="firstInput">
-      <input type="text" placeholder="Search here" v-model="input" />
+      <input type="text" placeholder="Search here" v-model="input" required />
       <button @click="search">Search</button>
     </div>
     <TabelComponent
@@ -32,7 +32,7 @@ export default {
   methods: {
     ...mapActions(["deleteProduk"]),
     search() {
-      this.$store.dispatch("setInput", this.input)
+      this.$store.dispatch("setInput", this.input);
     },
   },
 };

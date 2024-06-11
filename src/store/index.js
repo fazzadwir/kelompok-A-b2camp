@@ -114,26 +114,28 @@ export default createStore({
         },
       },
     ],
-    input: "",
+    input: " ",
     produkTambah: [],
-    produkDelete: []
+    produkDelete: [],
   },
   getters: {
     filteredProducts: (state) => {
-      if (state.input.length > 0) {
-        state.input = state.input.toLowerCase().replaceAll(" ", "")
-        return state.products.filter((product) =>
-          product.name.toLowerCase().replaceAll(" ", "").includes(state.input)
-        );
+      if (state.input) {
+        if (state.input.length) {
+          state.input = state.input.toLowerCase().replaceAll(" ", "");
+          return state.products.filter((product) =>
+            product.name.toLowerCase().replaceAll(" ", "").includes(state.input)
+          );
+        }
       }
       return state.products;
     },
     totalPrice: (state, getters) => {
       let temp = [];
-      if(state.input.length > 0){
-        temp = getters.filteredProducts
-      }else{
-        temp = state.products
+      if (state.input && state.input.length > 0) {
+        temp = getters.filteredProducts;
+      } else {
+        temp = state.products;
       }
       return temp.reduce((sum, product) => {
         if (product.data && product.data.price) {
@@ -148,20 +150,20 @@ export default createStore({
       const index = state.products.findIndex((product) => product.id === id);
       if (index !== -1) {
         const deletedProduct = state.products.splice(index, 1)[0];
-        state.produkDelete = [ ...state.produkDelete, deletedProduct ];
+        state.produkDelete = [...state.produkDelete, deletedProduct];
       }
     },
     SET_INPUT(state, input) {
       state.input = input;
     },
     ADD_PRODUK(state, product) {
-      state.products =  [ ...state.products, product ];
-      state.produkTambah = [ ...state.produkTambah, product ];
-    }
+      state.products = [...state.products, product];
+      state.produkTambah = [...state.produkTambah, product];
+    },
   },
   actions: {
     deleteProduk({ commit }, id) {
-      if(confirm("Apakah anda yakin ingin menghapus produk ini ?")){
+      if (confirm("Apakah anda yakin ingin menghapus produk ini ?")) {
         commit("DELETE_PRODUK", id);
       }
     },
@@ -171,6 +173,6 @@ export default createStore({
     addProduct({ commit }, product) {
       commit("ADD_PRODUK", product);
       alert("Data berhasil ditambahkan!");
-    }
-  }
+    },
+  },
 });
