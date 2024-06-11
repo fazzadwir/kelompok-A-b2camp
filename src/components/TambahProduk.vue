@@ -45,18 +45,11 @@ export default {
           color: this.newProductColor,
         },
       };
-<<<<<<< HEAD
       this.$store.dispatch("addProduct",newProduct);
-=======
-      // this.addProduct(newProduct);
-      this.$store.dispatch("tambahProduk",newProduct);
->>>>>>> 171d3ffb7a3420cd069848ed474b74dbbc5b69bc
       this.newProductName = "";
       this.newProductPrice = "";
       this.newProductColor = "";
     },
   },
 };
-
-
 </script>

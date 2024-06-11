@@ -1,5 +1,4 @@
 <template>
-  <h1>Data Delete</h1>
   <div class="delete-container">
     <ul>
       <li v-for="(product, index) in produkDelete" :key="index">

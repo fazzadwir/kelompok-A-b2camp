@@ -1,5 +1,4 @@
 <template>
-<!--ini perent-->
   <div class="home">
     <h1>List Phone Mobile Product</h1>
     <div class="firstInput">
@@ -11,22 +10,20 @@
       @delete-produk="deleteProduk"
     />
     <DeleteProduk />
-    <TambahProduk />
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions, mapState } from "vuex";
 import TabelComponent from "../components/TabelComponent.vue";
+import TambahProduk from "../components/TambahProduk.vue";
 import DeleteProduk from "../components/DeleteProduk.vue";
-import TambahProduk from "@/components/TambahProduk.vue";
 
 export default {
   components: {
     TabelComponent,
-    // TambahProduk,
+    TambahProduk,
     DeleteProduk,
-    TambahProduk
   },
   computed: {
     ...mapState(["produkDelete"]),
