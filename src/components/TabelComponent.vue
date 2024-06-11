@@ -44,7 +44,7 @@
         </tr>
         <tr id="total">
           <td colspan="11">Total Price</td>
-          <td>${{ formattedTotalPrice }}</td>
+          <td>${{ this.formattedTotalPrice }}</td>
         </tr>
         <tr id="zero" v-if="products.length === 0">
           <td colspan="12">Data not found!</td>
@@ -55,27 +55,22 @@
 </template>
 
 <script>
-export default {
-  props: {
-    products: Array,
-  },
-  computed: {
-    totalPrice() {
-      return this.products.reduce((sum, product) => {
-        if (product.data && product.data.price) {
-          return sum + parseFloat(product.data.price);
-        }
-        return sum;
-      }, 0);
-    },
-    formattedTotalPrice() {
-      return Math.round(this.totalPrice);
-    },
-  },
-  methods: {
-    deleteProduk(id) {
-      this.$emit("delete-produk", id);
-    },
-  },
-};
+    import { mapGetters } from "vuex";
+
+    export default {
+      props: {
+        products: Array,
+      },
+      computed: {
+        ...mapGetters(["totalPrice"]),
+        formattedTotalPrice() {
+          return this.totalPrice.toFixed(2);
+        },
+      },
+      methods: {
+        deleteProduk(id) {
+          this.$emit("delete-produk", id);
+        },
+      },
+    };
 </script>

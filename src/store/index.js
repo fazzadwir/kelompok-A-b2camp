@@ -142,20 +142,29 @@ export default createStore({
       const index = state.products.findIndex((product) => product.id === id);
       if (index !== -1) {
         const deletedProduct = state.products.splice(index, 1)[0];
-        state.produkDelete.push(deletedProduct);
+        state.produkDelete = [ ...state.produkDelete, deletedProduct ];
       }
     },
     SET_INPUT(state, input) {
       state.input = input;
     },
+    ADD_PRODUK(state, product) {
+      state.products =  [ ...state.products, product ];
+      state.produkTambah = [ ...state.produkTambah, product ];
+    }
   },
   actions: {
     deleteProduk({ commit }, id) {
-      commit("DELETE_PRODUK", id);
+      if(confirm("Apakah anda yakin ingin menghapus produk ini ?")){
+        commit("DELETE_PRODUK", id);
+      }
     },
     setInput({ commit }, input) {
       commit("SET_INPUT", input);
     },
-  },
-  modules: {},
+    addProduct({ commit }, product) {
+      commit("ADD_PRODUK", product);
+      alert("Data berhasil ditambahkan!");
+    }
+  }
 });
