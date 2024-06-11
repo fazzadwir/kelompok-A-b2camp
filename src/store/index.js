@@ -148,9 +148,14 @@ export default createStore({
     SET_INPUT(state, input) {
       state.input = input;
     },
+<<<<<<< HEAD
     ADD_PRODUK(state, product) {
       state.products =  [ ...state.products, product ];
       state.produkTambah = [ ...state.produkTambah, product ];
+=======
+    TAMBAH_PRODUK(state, product) {
+      state.products.push(product);
+>>>>>>> 171d3ffb7a3420cd069848ed474b74dbbc5b69bc
     }
   },
   actions: {
@@ -162,9 +167,17 @@ export default createStore({
     setInput({ commit }, input) {
       commit("SET_INPUT", input);
     },
+<<<<<<< HEAD
     addProduct({ commit }, product) {
       commit("ADD_PRODUK", product);
       alert("Data berhasil ditambahkan!");
     }
   }
+=======
+    tambahProduk({ commit }, product) {
+      commit("TAMBAH_PRODUK", product);
+    }
+  },
+  modules: {},
+>>>>>>> 171d3ffb7a3420cd069848ed474b74dbbc5b69bc
 });
