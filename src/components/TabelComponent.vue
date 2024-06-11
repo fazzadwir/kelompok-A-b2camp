@@ -55,22 +55,22 @@
 </template>
 
 <script>
-    import { mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 
-    export default {
-      props: {
-        products: Array,
-      },
-      computed: {
-        ...mapGetters(["totalPrice"]),
-        formattedTotalPrice() {
-          return this.totalPrice.toFixed(2);
-        },
-      },
-      methods: {
-        deleteProduk(id) {
-          this.$emit("delete-produk", id);
-        },
-      },
-    };
+export default {
+  props: {
+    products: Array,
+  },
+  computed: {
+    ...mapGetters(["totalPrice"]),
+    formattedTotalPrice() {
+      return this.totalPrice.toFixed(2);
+    },
+  },
+  methods: {
+    deleteProduk(id) {
+      this.$emit("delete-produk", id);
+    },
+  },
+};
 </script>

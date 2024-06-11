@@ -27,8 +27,8 @@ export default {
   data() {
     return {
       newProductName: "",
-      newProductPrice:"",
-      newProductColor:"",
+      newProductPrice: "",
+      newProductColor: "",
     };
   },
   computed: {
@@ -38,14 +38,17 @@ export default {
     ...mapActions(["addProduct"]),
     addProduct() {
       const newProduct = {
-        id: (parseInt(this.products[this.products.length-1].id))+ 1,
+        id:
+          this.products.length > 0
+            ? parseInt(this.products[this.products.length - 1].id) + 1
+            : 1,
         name: this.newProductName,
         data: {
           price: this.newProductPrice,
           color: this.newProductColor,
         },
       };
-      this.$store.dispatch("addProduct",newProduct);
+      this.$store.dispatch("addProduct", newProduct);
       this.newProductName = "";
       this.newProductPrice = "";
       this.newProductColor = "";
