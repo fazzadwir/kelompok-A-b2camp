@@ -1,22 +1,39 @@
 <template>
   <div class="mt">
-    <h1>Tambah Produk</h1>
+    <h1><u>Tambah Produk</u></h1>
+    <h4>Add Product Name :</h4>
     <input
       type="text"
       v-model="newProductName"
       placeholder="Enter Product Name"
-    />
+    /><br>
+    <br>
+
+    <h4>Add Product Capacity :</h4>
+    <input
+      type="number/text"
+      v-model="newProductCapacity"
+      placeholder="Enter Product Capacity"
+      /><br>
+      <br>
+
+    <h4>Add Product Price :</h4>
     <input
       type="number"
       v-model="newProductPrice"
       placeholder="Enter Product Price"
-    />
+    /><br>
+    <br>
+
+    <h4>Add Product Color :</h4>
     <input
       type="text"
       v-model="newProductColor"
       placeholder="Enter Product Color"
-    />
-    <button @click="addProduct">Add</button>
+    /><br>
+    <br>
+
+    <button @click="addProduct" class="btn">Confirm Add</button>
   </div>
 </template>
 
@@ -29,6 +46,7 @@ export default {
       newProductName: "",
       newProductPrice: "",
       newProductColor: "",
+      newProductCapacity: "",
     };
   },
   computed: {
@@ -46,12 +64,14 @@ export default {
         data: {
           price: this.newProductPrice,
           color: this.newProductColor,
+          capacity: this.newProductCapacity,
         },
       };
       this.$store.dispatch("addProduct", newProduct);
       this.newProductName = "";
       this.newProductPrice = "";
       this.newProductColor = "";
+      this.newProductCapacity = "";
     },
   },
 };

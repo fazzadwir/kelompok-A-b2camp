@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>List Phone Mobile Product</h1>
+    <h1><u>List Phone Mobile Product</u></h1>
     <div class="firstInput">
       <input type="text" placeholder="Search here" v-model="input" required />
       <button @click="search">Search</button>
