@@ -116,7 +116,7 @@ export default createStore({
     ],
     input: "",
     produkTambah: [],
-    produkDelete: [],
+    produkDelete: []
   },
   getters: {
     filteredProducts: (state) => {
@@ -128,8 +128,14 @@ export default createStore({
       }
       return state.products;
     },
-    totalPrice: (state) => {
-      return state.products.reduce((sum, product) => {
+    totalPrice: (state, getters) => {
+      let temp = [];
+      if(state.input.length > 0){
+        temp = getters.filteredProducts
+      }else{
+        temp = state.products
+      }
+      return temp.reduce((sum, product) => {
         if (product.data && product.data.price) {
           return sum + parseFloat(product.data.price);
         }
@@ -142,26 +148,29 @@ export default createStore({
       const index = state.products.findIndex((product) => product.id === id);
       if (index !== -1) {
         const deletedProduct = state.products.splice(index, 1)[0];
-        state.produkDelete.push(deletedProduct);
+        state.produkDelete = [ ...state.produkDelete, deletedProduct ];
       }
     },
     SET_INPUT(state, input) {
       state.input = input;
     },
-    TAMBAH_PRODUK(state, product) {
-      state.products.push(product);
+    ADD_PRODUK(state, product) {
+      state.products =  [ ...state.products, product ];
+      state.produkTambah = [ ...state.produkTambah, product ];
     }
   },
   actions: {
     deleteProduk({ commit }, id) {
-      commit("DELETE_PRODUK", id);
+      if(confirm("Apakah anda yakin ingin menghapus produk ini ?")){
+        commit("DELETE_PRODUK", id);
+      }
     },
     setInput({ commit }, input) {
       commit("SET_INPUT", input);
     },
-    tambahProduk({ commit }, product) {
-      commit("TAMBAH_PRODUK", product);
+    addProduct({ commit }, product) {
+      commit("ADD_PRODUK", product);
+      alert("Data berhasil ditambahkan!");
     }
-  },
-  modules: {},
+  }
 });

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2>Tambah Produk</h2>
+  <div class="mt">
+    <h1>Tambah Produk</h1>
     <input
       type="text"
       v-model="newProductName"
@@ -17,11 +17,6 @@
       placeholder="Enter Product Color"
     />
     <button @click="addProduct">Add</button>
-    <ul>
-      <li v-for="(product, index) in produkTambah" :key="index">
-        {{ product.name }}
-      </li>
-    </ul>
   </div>
 </template>
 
@@ -37,29 +32,24 @@ export default {
     };
   },
   computed: {
-    ...mapState(["produkTambah"]),
+    ...mapState(["products"]),
   },
   methods: {
     ...mapActions(["addProduct"]),
     addProduct() {
       const newProduct = {
-        id: Date.now().toString(),
+        id: (parseInt(this.products[this.products.length-1].id))+ 1,
         name: this.newProductName,
         data: {
           price: this.newProductPrice,
           color: this.newProductColor,
         },
       };
-      // this.addProduct(newProduct);
-      this.$store.dispatch("tambahProduk",newProduct);
+      this.$store.dispatch("addProduct",newProduct);
       this.newProductName = "";
       this.newProductPrice = "";
       this.newProductColor = "";
     },
   },
 };
-
-
 </script>
-
-<style></style>
