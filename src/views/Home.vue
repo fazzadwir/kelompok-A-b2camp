@@ -11,14 +11,14 @@
       @delete-produk="deleteProduk"
     />
     <ListProduk
-      text="Data yang dihapus"
+      text="Deleted"
       :datas="produkDelete"
-      desc="Belum ada data yang dihapus"
+      desc="Masukan Delete Produk"
     />
     <ListProduk
-      text="Data yang ditambah"
+      text="Tambahan"
       :datas="produkTambah"
-      desc="Belum ada data yang ditambah"
+      desc="Masukan Tambah Produk"
     />
   </div>
 </template>

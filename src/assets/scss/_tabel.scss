@@ -8,8 +8,8 @@ table{
   border-radius: 20px;
   box-shadow: 8px 13px 82px 30px rgba(0,0,0,0.75);
   -webkit-box-shadow: 8px 13px 82px 30px rgba(0,0,0,0.75);
-  -moz-box-shadow: 8px 13px 82px 30px rgba(0,0,0,0.75);
-  >thead{
+  -moz-box-shadow: 8px 13px 82px 30px rgba(0, 0, 0, 0.068);
+   >thead{
     background-color: yellowgreen;
     color: whitesmoke;
   }
@@ -57,5 +57,26 @@ table{
    >a:hover{
     box-shadow: 0 2px 8px black;
   }
+};
+button{
+  background-color: #007bff; 
+  color: #fff;
+  transition: all 0.3s ease;
+};
+.list-container {
+  background-color:  #007bff;
+  color: aliceblue;
+  margin-left: 500px;
+  margin-right: 500px;
+};
+.mt{
+  h4{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  
 }
+  input{
+    border-radius: 25px;
 
+  }
+}
