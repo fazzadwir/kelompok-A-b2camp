@@ -13,10 +13,10 @@ export default createStore({
       },
       {
         id: "2",
-        name: "Apple iPhone 12 Mini, 256GB, Blue",
+        name: "Apple iPhone 12 Mini",
         data: {
-          color: "Black",
-          capacity: "500 GB",
+          color: "Blue",
+          capacity: "256GB",
         },
       },
       {
@@ -29,8 +29,9 @@ export default createStore({
       },
       {
         id: "4",
-        name: "Apple iPhone 11, 64GB",
+        name: "Apple iPhone 11",
         data: {
+          capacity: "64GB",
           price: 389.99,
           color: "Purple",
         },
@@ -80,8 +81,9 @@ export default createStore({
       },
       {
         id: "10",
-        name: "Apple iPad Mini 5th Gen",
+        name: "Apple iPad Mini",
         data: {
+          generation :"5th Gen",
           capacity: "64 GB",
           caseSize: "50mm",
           screensize: 7.9,
@@ -89,9 +91,10 @@ export default createStore({
       },
       {
         id: "11",
-        name: "Apple iPad Mini 5th Gen",
+        name: "Apple iPad Mini",
         data: {
           capacity: "254 GB",
+          generation :"5th Gen",
           screensize: 7.9,
         },
       },
