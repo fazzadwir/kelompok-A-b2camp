@@ -5,19 +5,20 @@
 
     margin: 40px;
     font-family: "ubuntu", Verdana, Geneva, Tahoma, sans-serif;
-    background-image: linear-gradient(
-        152deg,
-        hsl(211deg 66% 71%) 0%,
-        hsl(223deg 63% 74%) 11%,
-        hsl(239deg 60% 77%) 22%,
-        hsl(256deg 64% 76%) 33%,
-        hsl(268deg 67% 74%) 44%,
-        hsl(278deg 71% 72%) 56%,
-        hsl(286deg 74% 71%) 67%,
-        hsl(292deg 77% 68%) 78%,
-        hsl(296deg 79% 66%) 89%,
-        hsl(300deg 82% 63%) 100%
-        );
+    // background-image: linear-gradient(
+    //     152deg,
+    //     hsl(211deg 66% 71%) 0%,
+    //     hsl(223deg 63% 74%) 11%,
+    //     hsl(239deg 60% 77%) 22%,
+    //     hsl(256deg 64% 76%) 33%,
+    //     hsl(268deg 67% 74%) 44%,
+    //     hsl(278deg 71% 72%) 56%,
+    //     hsl(286deg 74% 71%) 67%,
+    //     hsl(292deg 77% 68%) 78%,
+    //     hsl(296deg 79% 66%) 89%,
+    //     hsl(300deg 82% 63%) 100%
+    //     );
+    background-color: hsl(30, 100%, 85%); /* Jingga pastel */
   }
 
   #app {

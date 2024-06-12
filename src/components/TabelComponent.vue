@@ -2,7 +2,7 @@
   <div class="table">
     <table>
       <thead>
-        <tr>
+        <tr style="background-color: #ffff99;">
           <th>No</th>
           <th>Nama</th>
           <th>Color</th>
@@ -43,8 +43,8 @@
           </td>
         </tr>
         <tr id="total">
-          <td colspan="11">Total Price</td>
-          <td>${{ this.formattedTotalPrice }}</td>
+          <td colspan="11" style="background-color: #ffc107; ;">Total Price</td>
+          <td>Rp. {{ this.formattedTotalPrice }}</td>
         </tr>
         <tr id="zero" v-if="products.length === 0">
           <td colspan="12">Data not found!</td>

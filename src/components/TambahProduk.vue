@@ -1,4 +1,5 @@
 <template>
+  
   <div class="mt">
     <h1><u>Tambah Produk</u></h1>
     <h4>Add Product Name :</h4>
@@ -66,13 +67,17 @@ export default {
           color: this.newProductColor,
           capacity: this.newProductCapacity,
         },
+        
       };
       this.$store.dispatch("addProduct", newProduct);
       this.newProductName = "";
       this.newProductPrice = "";
       this.newProductColor = "";
       this.newProductCapacity = "";
+      //redirect ke halaman Tabel data
+      this.$router.push('/');
     },
   },
 };
 </script>
+
