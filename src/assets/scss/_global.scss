@@ -86,9 +86,15 @@
     margin-top: 70px;
     display: inline-block;
   }
-  h4 {
-    font-family: bold;
+  p {
+    font-family: arial,bold;
     color: rgb(0, 0, 0);
+    display:inline-block;
+  }
+  label {
+    font-size: 25px;
+    margin-right: 10px;
+    display: flex;
   }
   .btn {
     width: 120px;
