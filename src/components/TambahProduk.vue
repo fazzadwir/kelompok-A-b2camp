@@ -2,36 +2,45 @@
   
   <div class="mt">
     <h1><u>Tambah Produk</u></h1>
-    <h4>Add Product Name :</h4>
+  <p>
+    <label>Product Name</label>
+  
     <input
       type="text"
       v-model="newProductName"
       placeholder="Enter Product Name"
-    /><br>
+    />
+  </p>
     <br>
-
-    <h4>Add Product Capacity :</h4>
+  <p>
+    <label>Product Capacity</label>
+    
     <input
       type="number/text"
       v-model="newProductCapacity"
       placeholder="Enter Product Capacity"
-      /><br>
+      />
+  </p>
       <br>
-
-    <h4>Add Product Price :</h4>
+  <p>
+    <label>Product Price</label>
+   
     <input
       type="number"
       v-model="newProductPrice"
       placeholder="Enter Product Price"
-    /><br>
+    />
+  </p>
     <br>
-
-    <h4>Add Product Color :</h4>
+  <p>
+    <label>Product Color</label>
+ 
     <input
       type="text"
       v-model="newProductColor"
       placeholder="Enter Product Color"
-    /><br>
+    />
+  </p>
     <br>
 
     <button @click="addProduct" class="btn">Confirm Add</button>
